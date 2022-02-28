@@ -213,6 +213,9 @@ class _PopupState extends State<Popup> {
   @override
   Widget build(BuildContext context) {
     _controller.value = TextEditingValue(text: widget.val);
+    _controller.selection = TextSelection.fromPosition(
+        TextPosition(offset: _controller.text.length));
+
     return Container(
       height: 200,
       decoration: BoxDecoration(
