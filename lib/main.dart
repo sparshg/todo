@@ -227,7 +227,7 @@ class _PopupState extends State<Popup> {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Text(
-              "Add new task",
+              widget.edit ? "Edit Task" : "Add new task",
               style: TextStyle(fontSize: 36),
             ),
             TextField(
